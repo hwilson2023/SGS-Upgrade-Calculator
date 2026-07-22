@@ -843,7 +843,7 @@ export default function CTCloudSGSUpgradeCalculator() {
   };
 
   const isBundleAddOnSelected = (key, addOn) => {
-    return bundleAddOnSelections[key] ?? Boolean(addOn.defaultSelected);
+    return selectedBundleAddOns[key] ?? Boolean(addOn.defaultSelected);
   };
 
   const toggleBundleAddOn = (key, addOn) => {
@@ -1061,7 +1061,7 @@ export default function CTCloudSGSUpgradeCalculator() {
     familyCatalog,
     currentTerm,
     selectedBundleAddOns,
-    bundleAddOnSelections,
+    selectedBundleAddOns,
     alaCarteSelections,
     currentFamily,
     clearinghouse,
