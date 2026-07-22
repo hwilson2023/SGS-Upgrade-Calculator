@@ -816,7 +816,7 @@ export default function CTCloudSGSUpgradeCalculator() {
   const selectedBundle =
     bundleOptions.find((bundle) => bundle.id === currentBundleId) || bundleOptions[0];
 
-  const selectedBundleAddOns = selectedBundle?.addOns || {};
+  const bundleAddOns = selectedBundle?.addOns || {};
   const selectedSgsPlan = sgsBundles[selectedSgsBundle];
 
   const handleFamilyChange = (family) => {
