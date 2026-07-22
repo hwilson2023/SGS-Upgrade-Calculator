@@ -1344,6 +1344,7 @@ export default function CTCloudSGSUpgradeCalculator() {
                       value,
                       label: term.label,
                     }))}
+                    description=""
                   />
 
                   <SelectField
@@ -1351,6 +1352,7 @@ export default function CTCloudSGSUpgradeCalculator() {
                     value={selectedBundle?.id}
                     onChange={handleBundleChange}
                     options={bundleOptions}
+                    description=""
                   />
                 </div>
 
