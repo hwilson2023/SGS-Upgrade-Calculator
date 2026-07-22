@@ -906,15 +906,14 @@ export default function CTCloudSGSUpgradeCalculator() {
       Object.entries(selectedBundleAddOns).forEach(([key, addOn]) => {
         if (!isBundleAddOnSelected(key, addOn)) return;
 
-        items.push({
-          label: addOn.label,
-          amount: getBundleAddOnAmount(addOn, providers),
-          note:
-            addOn.kind === "perProvider"
-              ? `${formatCurrency(addOn.monthly)}/provider/month. Multi-provider bundles may include a 2-provider minimum.`
-              : addOn.defaultSelected
-                ? "Selected as part of this current bundle setup."
-                : "Optional add-on selected for this current bundle setup.",
+       items.push({
+  label: (addOn as any).label,
+  amount: getBundleAddOnAmount(addOn as any, providers),
+  note: (addOn as any).kind === "perProvider"
+    ? `$${formatCurrency((addOn as any).monthly)}/provider/month. Multi-provider bundles may include a 2-provider minimum.`
+    : (addOn as any).defaultSelected
+    ? "Selected as part of this current bundle setup."
+    : "Optional add-on selected for this current bundle setup.",
         });
       });
     }
