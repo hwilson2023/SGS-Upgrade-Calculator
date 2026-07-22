@@ -939,9 +939,9 @@ export default function CTCloudSGSUpgradeCalculator() {
         if (!alaCarteSelections[key]) return;
 
         items.push({
-          label: addOn.label,
-          amount: addOn.monthly,
-          note: addOn.note,
+  label: (addOn as any).label,
+  amount: (addOn as any).monthly,
+  note: (addOn as any).note,
         });
       });
 
