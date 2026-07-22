@@ -1310,7 +1310,9 @@ export default function CTCloudSGSUpgradeCalculator() {
                   onChange={setProviderCount}
                   min={1}
                   step={1}
+                  prefix=""
                   description="Used for both the current-state calculation and the target SGS quote."
+                  
                 />
 
                 <NumberField
