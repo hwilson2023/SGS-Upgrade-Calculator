@@ -788,8 +788,8 @@ export default function CTCloudSGSUpgradeCalculator() {
   const [currentMode, setCurrentMode] = useState("bundle");
   const [currentTerm, setCurrentTerm] = useState("12month");
   const [currentBundleId, setCurrentBundleId] = useState("core-12-a-single");
-  const [bundleAddOnSelections, setBundleAddOnSelections] = useState({});
-  const [alaCarteSelections, setAlaCarteSelections] = useState({});
+  const [selectedBundleAddOns, setSelectedBundleAddOns] = useState<any>({});
+  const [alaCarteSelections, setAlaCarteSelections] = useState<any>({});
   const [clearinghouse, setClearinghouse] = useState("none");
   const [providerCount, setProviderCount] = useState(1);
   const [otherCurrentMonthly, setOtherCurrentMonthly] = useState(0);
