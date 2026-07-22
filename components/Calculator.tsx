@@ -824,7 +824,7 @@ export default function CTCloudSGSUpgradeCalculator() {
 
     setCurrentFamily(family);
     setCurrentBundleId(nextOptions[0].id);
-    setBundleAddOnSelections({});
+    setSelectedBundleAddOns({});
     setAlaCarteSelections({});
     setClearinghouse("none");
   };
@@ -834,12 +834,12 @@ export default function CTCloudSGSUpgradeCalculator() {
 
     setCurrentTerm(term);
     setCurrentBundleId(nextOptions[0].id);
-    setBundleAddOnSelections({});
+    setSelectedBundleAddOns({});
   };
 
   const handleBundleChange = (bundleId) => {
     setCurrentBundleId(bundleId);
-    setBundleAddOnSelections({});
+    setSelectedBundleAddOns({});
   };
 
   const isBundleAddOnSelected = (key, addOn) => {
@@ -847,7 +847,7 @@ export default function CTCloudSGSUpgradeCalculator() {
   };
 
   const toggleBundleAddOn = (key, addOn) => {
-    setBundleAddOnSelections((previous) => ({
+    setSelectedBundleAddOns((previous) => ({
       ...previous,
       [key]: !(previous[key] ?? Boolean(addOn.defaultSelected)),
     }));
