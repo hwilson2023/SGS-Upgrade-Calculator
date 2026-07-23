@@ -1195,7 +1195,7 @@ export default function CTCloudSGSUpgradeCalculator() {
     usageRates.engageOverageRate
   );
 
-  const handleSgsBundleSelect = (bundleKey) => {
+  const handleSgsBundleSelect = (bundleKey: any) => {
     setSelectedSgsBundle(bundleKey);
     if (bundleKey !== "grow") setTargetSmartFit(false);
   };
