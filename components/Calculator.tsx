@@ -1374,10 +1374,10 @@ export default function CTCloudSGSUpgradeCalculator() {
                          label={(addOn as any).label}
                           badge={(addOn as any).defaultSelected ? "Default" : undefined}
                           description={
-                               (addOn as any).kind === "perProvider"
-                              ? `${formatCurrency(addOn.monthly)}/provider/month`
-                              : `${formatCurrency(addOn.monthly)}/month`
-                          }
+                          (addOn as any).kind === "perProvider"
+                              ? `${formatCurrency((addOn as any).monthly)}/provider/month`
+                             : `${formatCurrency((addOn as any).monthly)}/month`
+}
                         />
                       );
                     })}
