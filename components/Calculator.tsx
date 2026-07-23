@@ -1370,13 +1370,15 @@ export default function CTCloudSGSUpgradeCalculator() {
                         <Toggle
                           key={key}
                           enabled={selected}
-                          onChange={() => toggleBundleAddOn(key, addOn)}
-                         label={(addOn as any).label}
-                          badge={(addOn as any).defaultSelected ? "Default" : undefined}
+                          onChange={() => toggleAlaCarte(key)}
+                          label={(addOn as any).label}
+                          badge={undefined}
                           description={
-                          (addOn as any).kind === "perProvider"
-                              ? `${formatCurrency((addOn as any).monthly)}/provider/month`
-                             : `${formatCurrency((addOn as any).monthly)}/month`
+                              (addOn as any).kind === "perProvider"
+                                ? `$${formatCurrency((addOn as any).monthly)}/provider/month`
+                                : `$${formatCurrency((addOn as any).monthly)}/month`
+  }
+/>
 }
                         />
                       );
