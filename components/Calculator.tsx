@@ -536,8 +536,8 @@ const currentCatalog = {
         },
       ],
       monthly: [],
-    }
-
+    },
+  };
 currentCatalog.core.bundles.monthly = currentCatalog.core.bundles["3month"].map((bundle) => ({
   ...bundle,
   id: bundle.id.replace("core-3", "core-monthly"),
