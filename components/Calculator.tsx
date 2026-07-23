@@ -1200,12 +1200,12 @@ export default function CTCloudSGSUpgradeCalculator() {
     if (bundleKey !== "grow") setTargetSmartFit(false);
   };
 
-  const handleTargetClaimsChange = (value) => {
+  const handleTargetClaimsChange = (value: any) => {
     setTargetClaims(value);
     if (value !== "none") setTargetBillingSuite(true);
   };
 
-  const handleSgsTermChange = (value) => {
+  const handleSgsTermChange = (value: any) => {
     setSgsTerm(value);
     if (value !== "12month") setApplyPromotions(false);
   };
