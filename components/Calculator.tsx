@@ -537,7 +537,6 @@ const currentCatalog = {
       ],
       monthly: [],
     },
-  },
 };
 
 currentCatalog.core.bundles.monthly = currentCatalog.core.bundles["3month"].map((bundle) => ({
